@@ -43,7 +43,7 @@ def mp3_download():
 button =ttk.Button(text='Download', command=mp3_download)
 button.pack(pady=10)
 
-button_folder = ttk.Button(text='open download folder', command=lambda:os.startfile(r'C:\Users\endri\Music'))
+button_folder = ttk.Button(text='open download folder', command=lambda:os.startfile(r'.'))
 button_folder.pack(pady=10)
 
 main_window.mainloop()
