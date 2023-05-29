@@ -26,10 +26,10 @@ destination_entry.pack(pady = 10)
 
 # downloading
 def mp3_download():
-    link = link_entry.get()w
+    link = link_entry.get()
     yt = YouTube(link)
     video = yt.streams.filter(only_audio=True).first()
-    destination = r'C:\Users\endri\Music'
+    destination = f'>> {destination_entry.get()}' or r'.'
     out_file = video.download(output_path=destination)
     # save the file
     base, ext = os.path.splitext(out_file)
